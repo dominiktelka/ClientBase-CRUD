@@ -11,7 +11,9 @@ clientRouter
         })
     })
     .get('/:id',(req,res) =>{
-        res.send('Pobierz pojedynczego')
+        res.render('client/one',{
+            client: db.getOne(req.params.id),
+        })
     })
 
     .post('/', (req,res)=>{
