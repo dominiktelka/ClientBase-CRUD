@@ -4,6 +4,7 @@ const {db} = require("../utils/db");
 
 const clientRouter = express.Router();
 
+
 clientRouter
     .get('/',(req,res) =>{
         res.render('client/list-all',{
@@ -16,19 +17,25 @@ clientRouter
         })
     })
 
-    .post('/', (req,res)=>{
-        res.send('Dodaj')
+    .put('/:id', (req,res) =>{
+        res.send('Zmodyfikuj!');
     })
     .put('/',(req,res)=>{
         res.send('Dodaj')
     })
-    .put('/:id', (req,res) =>{
-        res.send('Zmodyfikuj!');
-    })
     .delete('/:id',(req,res) =>{
         db.delete(req.params.id);
         res.render('client/delete')
-})
+    })
+    .post('/', (req,res)=>{
+        db.create(req.body)
+        res.render('client/added',{
+            name: req.body.name
+        })
+    })
+    .get('/form/add', (req,res) =>{
+        res.render('client/forms/add')
+    })
 
 module.exports = {
     clientRouter
