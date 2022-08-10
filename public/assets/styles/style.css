@@ -1,0 +1,18 @@
+table{
+    text-align: left;
+}
+tr{
+    margin: 2px;
+    background: #c9c1c1;
+}
+
+thead tr{
+    background-color: #9a5656;
+}
+tr:nth-child(2n){
+    background-color: #bda2a2;
+}
+td, th{
+    padding: 6px;
+
+}

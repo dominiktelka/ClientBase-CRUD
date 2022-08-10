@@ -1,0 +1,31 @@
+<h2>List of Clients</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                E-mail:
+            </th>
+            <th>
+                Name:
+            </th>
+            <th>
+                Date of next contact:
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each clients}}
+        <tr>
+                <th>
+                    {{this.email}}
+                </th>
+            <td>
+                {{this.name}}
+            </td>
+            <td>
+                {{this.nextContact}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
