@@ -11,19 +11,24 @@
             <th>
                 Date of next contact:
             </th>
+            <th>
+            </th>
         </tr>
     </thead>
     <tbody>
     {{#each clients}}
         <tr>
                 <th>
-                    {{this.email}}
+                    <a href="mailto:{{this.email}}" target="_blank">{{this.email}}</a>
                 </th>
             <td>
-                {{this.name}}
+                <a href="/client/{{this.id}}">{{this.name}}</a>
             </td>
             <td>
                 {{this.nextContact}}
+            </td>
+            <td>
+                <a href="/client/{{this.id}}">Details</a>
             </td>
         </tr>
     {{/each}}
