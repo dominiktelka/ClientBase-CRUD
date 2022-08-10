@@ -6,7 +6,7 @@ tr{
     background: #c9c1c1;
 }
 
-thead tr{
+thead tr, .header-of-left th{
     background-color: #9a5656;
 }
 tr:nth-child(2n){
