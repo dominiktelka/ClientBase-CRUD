@@ -1,5 +1,7 @@
 table{
     text-align: left;
+    margin: 0 auto;
+    width: 80%;
 }
 tr{
     margin: 2px;
