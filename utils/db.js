@@ -41,7 +41,7 @@ class Db{
     }
 
     delete(id){
-        this._data = this._data.filter(oneObj =>  oneObj.id === !id);
+        this._data = this._data.filter(oneObj =>  oneObj.id !== id);
         // return us new array without id which we give inside delete function
         this._save();
     }
