@@ -28,9 +28,10 @@ clientRouter
         res.render('client/delete')
     })
     .post('/', (req,res)=>{
-        db.create(req.body)
+        const id = db.create(req.body)
         res.render('client/added',{
-            name: req.body.name
+            name: req.body.name,
+            id,
         })
     })
     .get('/form/add', (req,res) =>{
