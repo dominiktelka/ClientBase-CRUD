@@ -20,9 +20,10 @@ class Db{
 
     create(obj){
         const id = uuid()
-        this._data.push({
+        this._data.push(new ClientRecord({
             id,
-            ...obj,})
+            ...obj,
+        }));
         this._save();
         return id;
     }
