@@ -1,6 +1,9 @@
 const {readFile, writeFile} = require('fs').promises
 const {join} = require('path')
 const {v4: uuid} = require ('uuid')
+const {Client} = require("../recrods/client-record");
+
+
 
 class Db{
     constructor(dbFileName) {
@@ -37,7 +40,8 @@ class Db{
                   ...oneObj,
                   ...newObj,
                 }: oneObj
-            // paramters from oneObj are replaced by parametrs from newObj
+            // parameters from oneObj are replaced by parameters from newObj
+
         ));
         this._save();
     }
@@ -50,6 +54,7 @@ class Db{
 }
 
 const db = new Db('client.json');
+
 
 module.exports = {
     db,
