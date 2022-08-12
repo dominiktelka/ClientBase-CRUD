@@ -5,7 +5,7 @@
             E-mail:
         </p>
         <p>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
         </p>
     </label>
     <label>
@@ -13,7 +13,7 @@
             Name:
         </p>
         <p>
-            <input type="text" name="name">
+            <input type="text" name="name" required>
         </p>
     </label>
     <label>
@@ -36,3 +36,7 @@
         <button type="submit">Save</button>
     </p>
 </form>
+
+<div>
+    {{> go-to-clients}}
+</div>
